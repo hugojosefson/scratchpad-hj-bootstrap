@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2
+
+- chore: configure repository features
+
 ## 0.0.1
 
 - chore: configure repository features
