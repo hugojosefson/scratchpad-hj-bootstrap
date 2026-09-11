@@ -15,7 +15,8 @@
       "description": "Run project checks.",
       "dependencies": [
         "format",
-        "test"
+        "test",
+        "publish-check"
       ]
     },
     "default": {
@@ -31,6 +32,12 @@
     "test": {
       "description": "Run tests.",
       "command": "deno test --parallel --trace-leaks"
+    },
+    "publish-check": {
+      "description": "Check JSR publication.",
+      "command": "deno publish --dry-run --allow-dirty --check=all"
     }
-  }
+  },
+  "name": "@hugojosefson/scratchpad-hj-bootstrap",
+  "version": "0.0.0"
 }
