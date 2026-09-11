@@ -1,0 +1,36 @@
+{
+  "exports": {
+    ".": "./src/lib/mod.ts"
+  },
+  "tasks": {
+    "fmt": {
+      "description": "Fix formatting.",
+      "command": "deno fmt"
+    },
+    "format": {
+      "description": "Check formatting.",
+      "command": "deno fmt --check"
+    },
+    "check": {
+      "description": "Run project checks.",
+      "dependencies": [
+        "format",
+        "test"
+      ]
+    },
+    "default": {
+      "description": "Fix formatting, then run checks.",
+      "command": "deno fmt && deno task check"
+    },
+    "all": {
+      "description": "Run all checks.",
+      "dependencies": [
+        "check"
+      ]
+    },
+    "test": {
+      "description": "Run tests.",
+      "command": "deno test --parallel --trace-leaks"
+    }
+  }
+}
